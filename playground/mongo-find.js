@@ -17,11 +17,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
 	// 	console.log('Unable to fech todos..', err);
 	// });
 
-	db.collection('Todos').find().count().then((count) => {
-		console.log(`Todos count: ${count}`);
-	}, (err) => {
-		console.log('Unable to fech todos..', err);
-	});
+	// db.collection('Todos').find().count().then((count) => {
+	// 	console.log(`Todos count: ${count}`);
+	// }, (err) => {
+	// 	console.log('Unable to fech todos..', err);
+	// });
+
+	
 
 	console.log('still counting???');
 	//client.close();
