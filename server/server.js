@@ -12,11 +12,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
-	let todo = new Todo({
+	let todoDoc = new Todo({
 		text: req.body.text
 	});
-	todo.save().then((doc) => {
-		res.send(doc);
+	todoDoc.save().then((todo) => {
+		res.send(todo);
 	}).catch( (e) => {
 		res.status(400).send();
 	});
